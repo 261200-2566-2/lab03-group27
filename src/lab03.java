@@ -61,7 +61,7 @@ public class lab03 {
         System.out.println("Def : " + p.getDef());
         System.out.println("Run speed : " + p.getRunSpeed());
         if(p.sword.getLevel() != 0) System.out.println("Sword level : " + p.sword.getLevel());
-        if(p.shield.getLevel() != 0) System.out.println("Shield level : " + p.sword.getLevel());
+        if(p.shield.getLevel() != 0) System.out.println("Shield level : " + p.shield.getLevel());
     }
 }
 
