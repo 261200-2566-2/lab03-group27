@@ -1,21 +1,24 @@
 public class shield {
-    int level;
-    double defence;
-    double SpeedShield;
+    private int level;
+    private int def;
+    private int speed;
     shield(int level){
-        if(level >= 1){
         this.level = level;
-        this.defence = 3;
-        SpeedShield = 1;}else{
-            this.level = level;
-            this.defence = 0;
-            SpeedShield = 0;
+        stat();
+    }
+    void levelUp(){
+        if(level < 5){
+            level++;
+            stat();
+        }else {
+            System.out.println("Your shield's level has reached its maximum.");
         }
     }
-    void shieldLevelUp(){
-        level++;
-        defence += 2;
-        SpeedShield += 1;
+    void stat(){
+        def = level*2;
+        speed = level;
     }
-
+    public int getLevel(){return level;}
+    public int getDef(){return def;}
+    public int getSpeed(){return speed;}
 }
