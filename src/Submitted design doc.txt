@@ -1,0 +1,13 @@
+เก็บข้อมูลของตัวละครไว้ใน class Character และข้อมูลดาบกับโล่ใน class sword class shield
+
+class Character เก็บข้อมูล level,hp,mana,atk,def,run speed,player number,isAlive และมีดาบกับโล่ที่มี class แยกเก็บข้อมูลอีกที่
+    - มี method equipSword,equipShield สำหรับติดตั้งอุปกรณ์
+    - มี method stat,mainStat สำหรับตั้งค่า stat ของตัวละครโดย mainStat จะตั้งค่า hp และ mana
+        atk,run speed = level runspeed = 12+((level-1)*2) - ค่าลดความเร็วของดาบกับโล่
+    - มี method levelUp เพื่ออัพเกรด stat ของตัวละครและฮีลเลือดตัวละครจนเต็ม level ตัน
+    - มี method upgradeSword,upgradeShield เพื่ออัพเกรดอาวุธ เรียกใช้ฟังชั่นใน class sword และ shield
+    - มี method attack เพื่อโจมตีระหว่างผู้เล่น โดย atk ผู้ตีหักล้างกับ def ผู้ถูกตีและนำไปลดเลือดผู้ถูกตี
+class sword เก็บข้อมูลของ level,atk,speed ของดาบ
+    - มี method levelUp เพิ่มเลเวลดาบ
+    - มี method stat ตั้งค่า atk = 2*level speed = level
+class shield ทำเหมือน def เป็น atk
